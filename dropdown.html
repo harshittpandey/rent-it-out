@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/mobiledropdown.css">
+<body>
+
+<div class="w3-container w3-hide-small">
+  <div class="w3-dropdown-click">
+    <button onclick="myFunction()" class="w3-button w3-hide-small w3-black">Resedential</button>
+    
+    <div id="Demo" class="w3-dropdown-content w3-margin-top w3-round w3-bar-block w3-border" style="width: 500px">
+        <form class="w3-container w3-margin-left w3-row" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>    
+
+  </div>
+  <div class="w3-dropdown-click">
+    <button onclick="myFunction2()" class="w3-button w3-hide-small w3-black">Commerical</button>
+    <div id="Demo2" class="w3-dropdown-content w3-margin-top w3-round w3-bar-block w3-border" style="width: 500px">
+        <form class="w3-container w3-margin-left w3-row" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+  </div>
+  <div class="w3-dropdown-click">
+    <button onclick="myFunction3()" class="w3-button w3-hide-small w3-black">ATM Space</button>
+    <div id="Demo3" class="w3-dropdown-content w3-margin-top w3-round w3-bar-block w3-border" style="width: 500px">
+        <form class="w3-container w3-margin-left w3-row" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+  </div>
+  <div class="w3-dropdown-click">
+    <button onclick="myFunction4()" class="w3-button w3-hide-small w3-black">Coworking Space</button>
+    <div id="Demo4" class="w3-dropdown-content w3-margin-top w3-round w3-bar-block w3-border" style="width: 500px">
+        <form class="w3-container w3-margin-left w3-row" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+  </div>
+  <div class="w3-dropdown-click">
+    <button onclick="myFunction5()" class="w3-button w3-hide-small w3-black">Rent</button>
+    <div id="Demo5" class="w3-dropdown-content w3-margin-top w3-round w3-bar-block w3-border" style="width: 500px">
+        <form class="w3-container w3-margin-left w3-row" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+<div class=" w3-hide-large w3-hide-medium">
+<div class="mobiledropdown">
+  <label id="img_category_label" class="field" for="img_category" data-value="">
+  <span>Category</span>
+  <div id="img_category" class="psuedo_select" name="img_category">
+    <span class="selected"></span>
+    <ul id="img_category_options" class="options">
+      <li class="option" data-value="residential" onclick="myFunction()">Residential</li>
+      <li class="option" data-value="commercial" onclick="myFunction2()">Commercial</li>
+      <li class="option" data-value="atmspace" onclick="myFunction3()">ATM Space</li>
+      <li class="option" data-value="coworkingspace" onclick="myFunction4()">Coworking Space</li>
+      <li class="option" data-value="rent" onclick="myFunction5()">Rent</li>
+
+    </ul>
+  </div>
+</label>
+  
+    <div id="mobileDemo" class="w3-round w3-border" style="width: 300px;display: none;position: absolute;left: 10;top: 22%">
+        <form class="w3-container" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+    <div id="mobileDemo2" class="w3-round w3-border" style="width: 300px;display: none;position: absolute;left: 10;top: 22%">
+        <form class="w3-container" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+    <div id="mobileDemo3" class="w3-round w3-border" style="width: 300px;display: none;position: absolute;left: 10;top: 22%">
+        <form class="w3-container" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+    <div id="mobileDemo4" class="w3-round w3-border" style="width: 300px;display: none;position: absolute;left: 10;top: 22%">
+        <form class="w3-container" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+    <div id="mobileDemo5" class="w3-round w3-border" style="width: 300px;display: none;position: absolute;left: 10;top: 22%">
+        <form class="w3-container" >
+        <p class="w3-threequarter">
+        <input class="w3-input" type="text" placeholder="Search Cities"></p>
+        <p class="" style=""><button class="w3-btn w3-margin-left w3-red" ><i class="fa fa-search"></i></button></p>
+      </form>
+    </div>
+
+</div>
+</div>
+
+<script src="js/mobiledropdown.js"></script>
+<script>
+  var d1= document.getElementById("Demo");
+  var d2= document.getElementById("Demo2");
+  var d3= document.getElementById("Demo3");
+  var d4= document.getElementById("Demo4");
+  var d5= document.getElementById("Demo5");
+function myFunction() {
+    var x = document.getElementById("Demo");
+    var x1 = document.getElementById("mobileDemo");
+    d2.className = d2.className.replace("w3-show", "");
+    d3.className = d3.className.replace("w3-show", "");
+    d4.className = d4.className.replace("w3-show", "");
+    d5.className = d5.className.replace("w3-show", "");
+      if (x1.className.indexOf("w3-show") == -1) {
+          x1.className += " w3-show";
+      } else { 
+          x1.className = x.className.replace(" w3-show", "");
+      } 
+    
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else { 
+          x.className = x.className.replace(" w3-show", "");
+      }
+    
+}
+function myFunction2() {
+    var x = document.getElementById("Demo2");
+    var x1 = document.getElementById("mobileDemo2");
+    d1.className = d1.className.replace("w3-show", "");
+    d3.className = d3.className.replace("w3-show", "");
+    d4.className = d4.className.replace("w3-show", "");
+    d5.className = d5.className.replace("w3-show", "");
+      if (x1.className.indexOf("w3-show") == -1) {
+          x1.className += " w3-show";
+      } else { 
+          x1.className = x.className.replace(" w3-show", "");
+      } 
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else { 
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+function myFunction3() {
+    var x = document.getElementById("Demo3");
+    var x1 = document.getElementById("mobileDemo3");
+    d2.className = d2.className.replace("w3-show", "");
+    d1.className = d1.className.replace("w3-show", "");
+    d4.className = d4.className.replace("w3-show", "");
+    d5.className = d5.className.replace("w3-show", "");
+      if (x1.className.indexOf("w3-show") == -1) {
+          x1.className += " w3-show";
+      } else { 
+          x1.className = x.className.replace(" w3-show", "");
+      } 
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else { 
+          x.className = x.className.replace(" w3-show", "");
+      }
+}
+function myFunction4() {
+    var x = document.getElementById("Demo4");
+    var x1 = document.getElementById("mobileDemo4");
+    d2.className = d2.className.replace("w3-show", "");
+    d3.className = d3.className.replace("w3-show", "");
+    d1.className = d1.className.replace("w3-show", "");
+    d5.className = d5.className.replace("w3-show", "");
+      if (x1.className.indexOf("w3-show") == -1) {
+          x1.className += " w3-show";
+      } else { 
+          x1.className = x.className.replace(" w3-show", "");
+      } 
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } 
+      else { 
+          x.className = x.className.replace(" w3-show", "");
+      }
+}
+
+function myFunction5() {
+    var x = document.getElementById("Demo5");
+    var x1 = document.getElementById("mobileDemo5");
+    d2.className = d2.className.replace("w3-show", "");
+    d3.className = d3.className.replace("w3-show", "");
+    d4.className = d4.className.replace("w3-show", "");
+    d1.className = d1.className.replace("w3-show", "");
+      if (x1.className.indexOf("w3-show") == -1) {
+          x1.className += " w3-show";
+      } else { 
+          x1.className = x.className.replace(" w3-show", "");
+      } 
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else { 
+          x.className = x.className.replace(" w3-show", "");
+      }
+}
+
+</script>
+
+</body>
+</html>
