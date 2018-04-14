@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400'>
+  <link rel="stylesheet" href="css/propertystyle.css">
+  <style type="text/css">
+    .upload-btn-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .btn {
+      border: 1px solid #2d2d2d;
+      color: gray;
+      background-color: white;
+      padding: 4px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  </style>
+<body style="background: #7f00ff;  background: -webkit-linear-gradient(to right, #7f00ff, #e100ff); background: linear-gradient(to right, #7f00ff, #e100ff); /">
+
+  <div class="w3-bar " style="background-color: #3B0A76">
+    <a href="index.html" class="w3-bar-item w3-text-white w3-xlarge w3-button">Rent it out</a>
+  </div>
+
+  <h2 class="w3-black w3-hide-small w3-center w3-padding" style="margin-top: 0">Add Property</h2>
+  <h3 class="w3-black w3-hide-large w3-hide-medium w3-center w3-padding" style="margin-top: 0">Add Property</h3>
+
+  <div class=" w3-margin-left w3-margin-right">
+      <div >
+      <div class="cont_heg_50"></div>
+          <div class="cont_select_center">
+          <div class="select_mate" data-mate-select="active" style="height: 40px;width: 0">
+              <select name="" onclick="return false;" id="">
+                <option value=""  >Select City</option>
+                <option value="delhi">Delhi</option>
+                <option value="noida">Noida</option>
+                <option value="greaternoida">Greater noida</option>
+                <option value="ghaziabad">Ghaziabad</option>
+                <option value="faridabad">Faridabad</option>
+                <option value="meerut">Meerut</option>
+                <option value="muzzafarnagar">Muzzafarnagar</option>
+                <option value="hapur">Hapur</option>
+                <option value="bulandshahr">Bulandshahr</option>
+                </select>
+              <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
+              <span onclick="open_select(this)" class="icon_select_mate" style="">
+                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                  <path d="M0-.75h24v24H0z" fill="none"/>
+                </svg>
+              </span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int">  </ul> 
+              </div>
+            </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div>
+        <p class="" style="width: 295px;">
+          <input class="w3-input w3-card-2 w3-round" style="height: 40px" name="locality" type="text" placeholder="Enter locality">
+        </p>
+      </div>
+
+      <div>
+        <p class="" style="width: 295px;">
+          <input class="w3-input w3-card-2 w3-round" style="height: 40px" name="address" type="text" placeholder="Enter address">
+        </p>
+      </div>
+
+    <div style="">
+      <div class="cont_heg_50"></div>
+          <div class="cont_select_center">
+          <div class="select_mate" data-mate-select="active" style="height: 40px;width: 0">
+              <select name="" onclick="return false;" id="">
+                <option value=""  >Select Property type</option>
+                <option value="apartment">Apartment</option>
+                <option value="independenthouse" >Independent house</option>
+                <option value="villa">Villa</option>
+              </select>
+              <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
+              <span onclick="open_select(this)" class="icon_select_mate" >
+                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                  <path d="M0-.75h24v24H0z" fill="none"/>
+                </svg>
+              </span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int">  </ul> 
+              </div>
+            </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="w3-margin-top">
+      <div class="cont_heg_50"></div>
+          <div class="cont_select_center">
+          <div class="select_mate" data-mate-select="active" style="height: 40px;width: 0">
+              <select name="" onclick="return false;" id="">
+                <option value=""  >Select Property Format</option>
+                <option value="1">1BHK</option>
+                <option value="2">2BHK</option>
+                <option value="3">3BHK</option>
+                <option value="4">4BHK</option>
+              </select>
+              <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
+              <span onclick="open_select(this)" class="icon_select_mate" >
+                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                  <path d="M0-.75h24v24H0z" fill="none"/>
+                </svg>
+              </span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int">  </ul> 
+              </div>
+            </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="w3-margin-top">
+      <div class="cont_heg_50"></div>
+          <div class="cont_select_center">
+          <div class="select_mate" data-mate-select="active" style="height: 40px;width: 0">
+              <select name="" onclick="return false;" id="">
+                <option value=""  >Select Furnishing type</option>
+                <option value="ff">Fully Furnished</option>
+                <option value="semi">Semi Furnished</option>
+                <option value="Unfurnished">Unfurnished</option>
+              </select>
+              <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
+              <span onclick="open_select(this)" class="icon_select_mate" >
+                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                  <path d="M0-.75h24v24H0z" fill="none"/>
+                </svg>
+              </span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int">  </ul> 
+              </div>
+            </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <p class="" style="width: 295px;">
+        <input class="w3-input w3-card-2 w3-round" style="height: 40px" name="address" type="text" placeholder="Enter expected income">
+      </p>
+    </div>
+
+    <div class=" upload-btn-wrapper" style="margin-left: 20%">
+      <button class="btn">Upload an image</button>
+      <input type="file" name="myfile" />
+    </div>
+    <div>
+      <button class="w3-btn w3-blue w3-margin-top" style="width: 100%; ">Submit</button>
+    </div>
+  </div>
+  
+  <div class="w3-card-2 w3-hide-small w3-white w3-round w3-display-middle" style="padding: 5%;margin-top: 10%;margin-bottom: 5%">
+  <div>
+    <div class="cont_heg_50"></div>
+        <div class="cont_select_center">
+        <div class="select_mate" data-mate-select="active" >
+            <select name="" onclick="return false;" id="">
+              <option value=""  >Select City</option>
+              <option value="delhi">Delhi</option>
+              <option value="noida">Noida</option>
+              <option value="greaternoida">Greater noida</option>
+              <option value="ghaziabad">Ghaziabad</option>
+              <option value="faridabad">Faridabad</option>
+              <option value="meerut">Meerut</option>
+              <option value="muzzafarnagar">Muzzafarnagar</option>
+              <option value="hapur">Hapur</option>
+              <option value="bulandshahr">Bulandshahr</option>
+              </select>
+            <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
+            <span onclick="open_select(this)" class="icon_select_mate" >
+              <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                <path d="M0-.75h24v24H0z" fill="none"/>
+              </svg>
+            </span>
+            <div class="cont_list_select_mate">
+              <ul class="cont_select_int">  </ul> 
+            </div>
+          </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  <div>
+    <p class="" style="width: 400px;">
+      <input class="w3-input w3-card-2 w3-round" style="height: 50px" name="locality" type="text" placeholder="Enter locality">
+    </p>
+  </div>
+  <div>
+    <p class="" style="width: 400px;">
+      <input class="w3-input w3-card-2 w3-round" style="height: 50px" name="address" type="text" placeholder="Enter address">
+    </p>
+  </div>
+  <div style="">
+    <div class="cont_heg_50"></div>
+        <div class="cont_select_center">
+        <div class="select_mate" data-mate-select="active" >
+            <select name="" onclick="return false;" id="">
+              <option value=""  >Select Property type</option>
+              <option value="apartment">Apartment</option>
+              <option value="independenthouse" >Independent house</option>
+              <option value="villa">Villa</option>
+            </select>
+            <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
+            <span onclick="open_select(this)" class="icon_select_mate" >
+              <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                <path d="M0-.75h24v24H0z" fill="none"/>
+              </svg>
+            </span>
+            <div class="cont_list_select_mate">
+              <ul class="cont_select_int">  </ul> 
+            </div>
+          </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="">
+    <div class="cont_heg_50"></div>
+        <div class="cont_select_center">
+        <div class="select_mate" data-mate-select="active" >
+            <select name="" onclick="return false;" id="">
+              <option value=""  >Select Property Format</option>
+              <option value="1">1BHK</option>
+              <option value="2">2BHK</option>
+              <option value="3">3BHK</option>
+              <option value="4">4BHK</option>
+            </select>
+            <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
+            <span onclick="open_select(this)" class="icon_select_mate" >
+              <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                <path d="M0-.75h24v24H0z" fill="none"/>
+              </svg>
+            </span>
+            <div class="cont_list_select_mate">
+              <ul class="cont_select_int">  </ul> 
+            </div>
+          </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <div class="cont_heg_50"></div>
+        <div class="cont_select_center">
+        <div class="select_mate" data-mate-select="active" >
+            <select name="" onclick="return false;" id="">
+              <option value=""  >Select Furnishing type</option>
+              <option value="ff">Fully Furnished</option>
+              <option value="semi">Semi Furnished</option>
+              <option value="Unfurnished">Unfurnished</option>
+            </select>
+            <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
+            <span onclick="open_select(this)" class="icon_select_mate" >
+              <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                <path d="M0-.75h24v24H0z" fill="none"/>
+              </svg>
+            </span>
+            <div class="cont_list_select_mate">
+              <ul class="cont_select_int">  </ul> 
+            </div>
+          </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div>
+    <p class="" style="width: 400px;">
+      <input class="w3-input w3-card-2 w3-round" style="height: 50px" name="address" type="text" placeholder="Enter expected income">
+    </p>
+  </div>
+
+  <div class=" upload-btn-wrapper" style="margin-left: 25%">
+    <button class="btn">Upload an image</button>
+    <input type="file" name="myfile" />
+  </div>
+  <div>
+    <button class="w3-btn w3-blue w3-margin-top" style="width: 100%; ">Submit</button>
+  </div>
+</div>
+
+<script src="js/propertystyle.js"></script>
+
+</body>
+</html>

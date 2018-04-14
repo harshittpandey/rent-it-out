@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>Login Form</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+      <script type="text/javascript">
+		  function validation()
+		  {
+		  	
+		  	var names=document.getElementById('name1').value;
+		  	names.trim();
+		  	var emailad=document.getElementById('email').value;
+		  	var pwd=document.getElementById('password1').value;
+		  	var pwd1=document.getElementById('password2').value;
+		  	var mob=document.getElementById('mobileNumber1').value;
+		 	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var phoneno = /^\d{10}$/;
+            httpGetAsync("http://www.swasthikassociates.in/insert.php?name="+names+"&phonenumber="+mob+"&email="+emailad+"&password="+pwd);
+            var reg1 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;
+            
+            if (phoneno.test(mob) == false) 
+            {
+                alert('Enter 10 digit Mobile Number');
+                return (false);
+            }
+            
+
+            if (reg.test(emailad) == false) 
+            {
+                alert('Invalid Email Address');
+                return (false);
+            }
+            
+            if(reg1.test(pwd)== false)
+            {
+            	alert('Password should be at least 6 characters long, containing number, lowercase alphabet and uppercase alphabet.');
+                return (false);
+            }
+
+            if (document.getElementById('password1').value != document.getElementById('password2').value)
+            {
+            	alert('Passwords do not match!!');
+            	return (false);
+            }
+		  }	
+		  function httpGetAsync(theUrl)
+			{
+
+            	alert(theUrl);
+			     var xmlHttp = new XMLHttpRequest();
+                 xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+                 xmlHttp.send( null );
+                 var vc=xmlHttp.responseText;
+     			alert(vc);
+			    
+    			return xmlHttp.responseText;
+
+			    }
+		 	
+  </script>
+
+  
+</head>
+
+<body style="background-color: #fff">
+	<img src="../images/sidebar.jpg" class="w3-opacity-min w3-display-left" style="width: 40%;height: 100%">
+
+  <div class="login-wrap w3-display-right" style="  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1) -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1); -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);">
+	<div class="login-html w3-round-large" style="margin-top: 10px">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				
+					<div class="limiter">
+		
+
+		<div class="container-login100" style="background-color: white;">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-font"></i>
+					</span>
+
+					<div class="wrap-input100 " >
+						<input class="input100" type="text" name="mobileNumber">
+						<span class="focus-input100" data-placeholder="Mobile Number"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input id="check" type="checkbox" class="check" checked>
+						<label for="check"><span class="icon"></span> Keep me Signed in</label>
+					</div>
+
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Login
+							</button>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		</div>
+	
+
+	<div id="dropDownSelect1"></div>
+		</div>
+			<div class="sign-up-htm">
+				<form onsubmit= "return validation()" method="post">
+				<div class="group">
+					<label for="user" class="label">Name</label>
+					<input id="name1" type="text" class="input" autocomplete="off" required>
+				</div>
+				<div class="group">
+					<label for="user" class="label">Mobile Number</label>
+					<input id="mobileNumber1" type="text" class="input" autocomplete="off" required>
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="email" type="text" class="input" autocomplete="off" required>
+				</div>
+				<div class="group">
+					<label for="pass2" class="label">Password</label>
+					<input id="password1" type="password" class="input" data-type="password" autocomplete="off" required>
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Repeat Password</label>
+					<input id="password2" type="password" class="input" data-type="password" autocomplete="off" required>
+				</div>	
+
+				<div>
+					<input type="radio" class="abc" name="loginAs" value="SingleRoom">Signup as Tenant<br><br>
+  					<input type="radio" class="abc" name="loginAs" value="DoubleRoom">Signup as Owner
+  				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign Up" autocomplete="off">
+				</div>
+					</form>
+			</div>
+		</div>
+	</div>
+</div>
+  
+  
+  
+
+</body>
+
+</html>

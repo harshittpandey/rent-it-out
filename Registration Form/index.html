@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Property Listings Form</title>
+  		
+  	  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  	  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <script type="text/javascript">
+
+      function validation()
+		  {
+		  	var pname=document.getElementById('user').value;
+		  	var pdesc=document.getElementById('pass').value;
+			var city=document.getElementById('user2').value;
+		  	var state=document.getElementById('user3').value;
+		  	var pincode=document.getElementById('user7').value;
+		  	var ad1=document.getElementById('user4').value;
+		  	var ad2=document.getElementById('user1').value;
+		 	var phoneno = /^\d{6}$/;
+            if (phoneno.test(pincode) == false)
+            {
+                alert('Enter correct Pincode');
+                return (false);
+            }
+           
+           
+		  }	
+
+      </script>
+  
+</head>
+
+<body>
+
+		<div class="login-wrap">
+			<div class="login-html">
+			
+				<input  type="radio" name="text" class="sign-in" checked><label class="tab">Property Listings</label>
+				<input id="tab-2" type="radio" name="tab" class="sign-up"e><label class="tab"></label>
+				<div class="login-form">
+					<div class="sign-in-htm">
+						<form onsubmit= "return validation()">
+								<div class="group">
+									<label for="Mobile Number" class="label">Property Name</label>
+									<input id="user" type="text" class="input" required>
+								</div>
+
+								<div class="group">
+									<label class="label">Description of the property</label>
+									<input id="pass" type="text" class="input" required>
+								</div>
+
+
+									<div class="group">
+									<label for="Mobile Number" class="label">Type of Property</label>
+								</div>
+
+								<div>
+									<input type="radio" id="abc" name="propertyType" value="SingleRoom">  Single Room<br><br>
+				  					<input type="radio" id="abc" name="propertyType" value="DoubleRoom">  Double Seater Room<br><br>
+				 					<input type="radio" id="abc" name="propertyType" value="doWorkingSpace">  Do Working Space<br><br>
+				 					<input type="radio" id="abc" name="propertyType" value="Shop">  Shop<br><br>
+				 					<input type="radio" id="abc" name="propertyType" value="Atm">  ATM<br><br>
+				 				</div>
+
+								<div class="group">
+									<label class="label">Address</label>
+									<input id="user4" type="text" class="input" placeholder="Line 1" required><br>
+									<input id="user1" type="text" class="input" placeholder="Line 2" required>
+								</div>
+								<div class="group">
+									<label class="label">City/District</label>
+									<input id="user2" type="text" class="input" required>
+								</div>
+								<div class="group">
+									<label class="label">State</label>
+									<input id="user3" type="text" class="input" required>
+								</div>
+								<div class="group">
+									<label class="label">Pincode</label>
+									<input id="user7" type="text" class="input" required>
+								</div>
+
+								<div class="group">
+									<label for="Mobile Number" class="label">Amenities</label>
+								</div>
+								<div class="group">
+									<input id="check" type="checkbox" >
+									<label for="check"> Mess</label><br><br>
+									
+							
+									<input id="check" type="checkbox" >
+									<label for="check"> Air Conditioner</label><br><br>
+									
+									<input id="check" type="checkbox" >
+									<label for="check">Wifi</label><br><br>
+									
+								</div>
+
+								<div class="group">
+									<label class="label">Upload Images</label><br>
+									<input type="file" name="foo" multiple >
+								</div>
+
+								<div class="group">
+									<label class="label">Upload ID proof</label><br>
+									<input type="file" name="foo" multiple >
+								</div>
+
+								<div class="group">
+									<label class="label">Upload Ownership proof</label><br>
+									<input type="file" name="foo" multiple ><br><br>
+								</div>
+								
+								<div class="group">
+									<input type="submit" class="button1" value="Submit">
+								</div>
+						</form>
+						
+					</div>
+					
+				</div>
+			
+			</div>
+		</div>
+  
+  
+
+</body>
+
+</html>
